@@ -1,49 +1,40 @@
 <template>
-  <q-page class="row items-center justify-evenly">
-    <example-component
-      title="Example component"
-      active
-      :todos="todos"
-      :meta="meta"
-    ></example-component>
+  <q-page>
+    <div class="q-pa-md">
+      <div class="q-col-gutter-md row items-start">
+        <div class="col-6">
+          <q-img src="../assets/cv_kuva.jpg" no-native-menu>
+            <div class="absolute-bottom text-subtitle1 text-left">
+              Työkokemus
+            </div>
+          </q-img>
+        </div>
+      </div>
+    </div>
+
   </q-page>
 </template>
 
 <script lang="ts">
-import { Todo, Meta } from 'components/models';
-import ExampleComponent from 'components/ExampleComponent.vue';
 
-import { Vue, Component } from 'vue-property-decorator';
+import ExampleComponent from 'components/ExampleComponent.vue';
+import {Vue, Component} from 'vue-property-decorator';
 
 @Component({
-  components: { ExampleComponent }
+  components: {ExampleComponent}
 })
 export default class PageIndex extends Vue {
-  todos: Todo[] = [
-    {
-      id: 1,
-      content: 'ct1'
-    },
-    {
-      id: 2,
-      content: 'ct2'
-    },
-    {
-      id: 3,
-      content: 'ct3'
-    },
-    {
-      id: 4,
-      content: 'ct4'
-    },
-    {
-      id: 5,
-      content: 'ct5'
-    }
-  ];
-  meta: Meta = {
-    totalCount: 1200
-  };
+
 };
 
 </script>
+
+<style>
+
+.q-pa-md q-img{
+  height: 550px;
+}
+
+</style>
+
+
