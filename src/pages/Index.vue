@@ -1,30 +1,35 @@
 <template>
   <q-page>
-    <div class="container">
-      <div class="top-row">
-        <div class="col-1">
-          <div class="profile-img">
-            <q-img style="height: 600px; width: 45em;" :fit='contain' src="../assets/cv_kuva.jpg" alt=""/>
+    <div class="parent">
+      <div class="container">
+        <div class="top-row row">
+          <div class="col-xs-12 col-sm-6 column">
+            <q-img src="../assets/cv_kuva.jpg" alt=""/>
           </div>
-        </div>
-        <div class="col-2">
-          Second column
-        </div>
-      </div>
-      <div class="middle-row">
-        <div class="col-3">
-          First column
-        </div>
-        <div class="col-4">
-          Second column
-        </div>
-      </div>
-      <div class="bottom-row">
-        <div class="col-5">
-          First column
-        </div>
-        <div class="col-6">
-          Second column
+          <div class="col-xs-12 col-sm-6 column">
+            <h1 class="name">
+              MARIA <span>KEKOLA</span>
+            </h1>
+            <span class="title">
+              Luonnont. Kand., Tietojenkäsittelytiede
+            </span>
+            <p>
+              sak dd sakdsadlsa d dsadksadösa dsk ds jsfjskakf saölfölsakfölkölks fsa fjfsakölskaldksa
+              dsd sölkdsaölkd  sdölksa kdöskdölsak sadk-lsadsa dsa sakdösaldäsa ds dsdlsd äsad  s ösadsal
+            </p>
+          </div>
+          <div class="col-xs-12 col-sm-6 column">
+            First column
+          </div>
+          <div class="col-xs-12 col-sm-6 column">
+            Second column
+          </div>
+          <div class="col-xs-12 col-sm-6 column">
+            First column
+          </div>
+          <div class="col-xs-12 col-sm-6 column">
+            Second column
+          </div>
         </div>
       </div>
     </div>
@@ -47,72 +52,72 @@ export default class PageIndex extends Vue {
 
 <style>
 
-.container {
-  background: rgba(15,15,15,0.95);
+.parent {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+
 }
 
-q-img {
-  margin: auto;
-  width: 100%;
-  max-width: 45em;
-  max-height: 100%;
+.container {
+  background: rgba(15, 15, 15, 0.95);
+  height: 100%;
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
 }
+
+.name {
+  font-size: 4rem;
+  line-height: 70px;
+  margin: 0;
+}
+
+.name span {
+  display: block;
+  font-weight: bold;
+}
+
+.title {
+  background: #223444;
+  color: white;
+  padding: 5px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+
+/*q-img {*/
+/*  margin: auto;*/
+/*  width: 100%;*/
+/*  max-width: 45em;*/
+/*  max-height: 100%;*/
+/*}*/
 
 .top-row {
-  display: flex;
   justify-content: center;
+}
+
+.column {
+  background: #223444;
+}
+
+.column:nth-child(2n) {
+  background: white;
+}
+
+.column:nth-child(2) {
+  padding: 70px 20px;
 }
 
 .middle-row {
   justify-content: center;
-  display: flex;
 }
 
 .bottom-row {
   justify-content: center;
-  display: flex;
-}
-
-.col-1 {
-  background: #121212;
-  height: 600px;
-  width: 45em;
-  object-fit: contain;
-}
-
-.col-2 {
-  background: #ffffff;
-  padding: 15px;
-  height: 600px;
-  width: 45em;
-}
-
-.col-3 {
-  background: #223444;
-  padding: 15px;
-  height: 600px;
-  width: 45em;
-}
-
-.col-4 {
-  background: #ffffff;
-  padding: 15px;
-  height: 600px;
-  width: 45em;
-}
-
-.col-5 {
-  background: #223444;
-  padding: 15px;
-  height: 400px;
-  width: 45em;
-}
-
-.col-6 {
-  background: #ffffff;
-  padding: 15px;
-  height: 400px;
-  width: 45em;
 }
 
 </style>

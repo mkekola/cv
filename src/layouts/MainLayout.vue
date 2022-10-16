@@ -22,4 +22,12 @@ export default class MainLayout extends Vue {
 
 }
 
+
 </script>
+
+<style>
+
+html {
+  background: #1D1D1D;
+}
+</style>
