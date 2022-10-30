@@ -18,7 +18,7 @@
 
 import ExampleComponent from 'components/ExampleComponent.vue';
 import {Vue, Component, Prop} from 'vue-property-decorator';
-import Carousel from "components/Carousel.vue";
+import Carousel from 'components/Carousel.vue';
 
 @Component({
   components: {Carousel, ExampleComponent}
@@ -35,7 +35,7 @@ export default class Subtitle extends Vue {
 </script>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Source+Sans+Pro:wght@300&display=swap');
 
 .smallrect {
   width: 20px;
@@ -52,8 +52,9 @@ export default class Subtitle extends Vue {
 .subtext {
   line-height: 70px;
   margin-left: 2rem;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 1.8rem;
+  font-weight: bold;
 }
 
 .subtext-left {

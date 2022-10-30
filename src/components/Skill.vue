@@ -3,15 +3,17 @@
     show-value
     class="text-white q-ma-md"
     :value="value"
-    size="90px"
+    size="4rem"
     :thickness="0.2"
     color="secondary"
     center-color="accent"
     track-color="transparent"
+
   >
     <q-icon
       :name="icon"
       color="secondary"
+      size="2rem"
     />
   </q-circular-progress>
 </template>

@@ -4,7 +4,7 @@
       <div class="container">
         <div class="top-row row">
           <div class="col-xs-12 col-sm-6 column">
-            <Carousel />
+            <Carousel/>
           </div>
           <div class="col-xs-12 col-sm-6 column">
             <h1 class="name">
@@ -14,23 +14,67 @@
               Luonnont. Kand., Tietojenkäsittelytiede
             </span>
             <p>
+              Inspiroitunut ja tunnollinen tietojenkäsittelytieteen toisen vuoden opiskelija täällä moi! Toimin
+              ainejärjestömme
+              TKO-äly ry:n tiedottajana, somevastaavana sekä useamman tiimin jäsenenä. Viimeiset viisi vuotta olen
+              työskennellyt luottamustehtävissä
+              ansioituneesti. Olen harrastekiipeilijä ja puoliammattilainen valokuvaaja sekä sisällöntuottaja.
+              Leipätiedotuksen leipätestin tulos: "Olet terveellinen ja kaikkeen menoon mukaan mahtuva innostunut
+              siemennäkkäri". 😀
             </p>
           </div>
           <div class="col-xs-12 col-sm-6 column">
-            <Subtitle title="Työkokemus" :left="true" />
+            <Subtitle title="Työkokemus" :left="true"/>
           </div>
           <div class="col-xs-12 col-sm-6 column">
-            <Subtitle title="Koulutus" :left="false" />
+            <Subtitle title="Koulutus" :left="false"/>
             Second column
           </div>
           <div class="col-xs-12 col-sm-6 column">
-            <Subtitle title="Yhteystiedot" :left="true" />
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-            Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            <Subtitle title="Yhteystiedot" :left="true"/>
+            <q-btn class="q-mx-xl q-my-lg" flat v-ripple no-caps
+                   style="height: 3.1rem; font-family: 'Source Sans Pro', sans-serif;"
+                   @click="moveToPage('mailto: maria.kekola@gmail.com')">
+              <div class="row justify-start">
+                <div style="position: absolute; left: 40px; top: 50%; transform: translateY(-50%)">
+                  <q-avatar icon="fa-solid fa-envelope" font-size="0.8rem" size="2.5rem" color="secondary"
+                            text-color="accent"/>
+                </div>
+                <div style="font-size: 1.1rem; color: darkgrey; text-align: start; width: 5rem">
+                  Sähköposti
+                </div>
+              </div>
+            </q-btn>
+            <q-btn class="q-mx-xl q-my-lg" flat v-ripple no-caps
+                   style="height: 3.1rem; font-family: 'Source Sans Pro', sans-serif;"
+                   @click="moveToPage('https://github.com/mkekola')">
+              <div class="row justify-start">
+                <div style="position: absolute; left: 40px; top: 50%; transform: translateY(-50%)">
+                  <q-avatar icon="fa-brands fa-github" font-size="0.92rem" size="2.5rem" color="secondary"
+                            text-color="accent"/>
+                </div>
+                <div style="font-size: 1.1rem; color: darkgray; text-align: start; width: 5rem">
+                  Github
+                </div>
+              </div>
+            </q-btn>
+            <q-btn class="q-mx-xl q-my-lg" flat v-ripple no-caps
+                   style="height: 3.1rem; font-family: 'Source Sans Pro', sans-serif;"
+                   @click="moveToPage('https://www.instagram.com/mariasimpression/')">
+              <div class="row justify-start">
+                <div style="position: absolute; left: 40px; top: 50%; transform: translateY(-50%)">
+                  <q-avatar icon="fa-brands fa-instagram" font-size="0.92rem" size="2.5rem" color="secondary"
+                            text-color="accent"/>
+                </div>
+                <div style="font-size: 1.1rem; color: darkgrey; text-align: start; width: 5rem">
+                  Portfolio
+                </div>
+              </div>
+            </q-btn>
           </div>
           <div class="col-xs-12 col-sm-6 column">
-            <Subtitle title="Taidot" :left="false" />
-            <SkillList />
+            <Subtitle title="Taidot" :left="false"/>
+            <SkillList/>
 
           </div>
         </div>
@@ -43,20 +87,25 @@
 
 import ExampleComponent from 'components/ExampleComponent.vue';
 import {Vue, Component} from 'vue-property-decorator';
-import Carousel from "components/Carousel.vue";
-import Subtitle from "components/Subtitle.vue";
-import SkillList from "components/SkillList.vue";
+import Carousel from 'components/Carousel.vue';
+import Subtitle from 'components/Subtitle.vue';
+import SkillList from 'components/SkillList.vue';
+
 
 @Component({
   components: {SkillList, Carousel, Subtitle, ExampleComponent}
 })
 export default class PageIndex extends Vue {
+  moveToPage(link: string) {
+    window.open(link)
+  }
 
 };
 
 </script>
 
-<style>
+<style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Source+Sans+Pro:wght@300&display=swap');
 
 .parent {
   display: flex;
@@ -75,9 +124,12 @@ export default class PageIndex extends Vue {
 }
 
 .name {
-  font-size: 4rem;
+  font-size: 4.5rem;
   line-height: 70px;
   margin: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: lighter;
+  padding-bottom: 1rem;
 }
 
 .name span {
@@ -92,15 +144,9 @@ export default class PageIndex extends Vue {
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 35px;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
-
-/*q-img {*/
-/*  margin: auto;*/
-/*  width: 100%;*/
-/*  max-width: 45em;*/
-/*  max-height: 100%;*/
-/*}*/
 
 .top-row {
   justify-content: center;
@@ -118,13 +164,12 @@ export default class PageIndex extends Vue {
   padding: 70px 20px;
 }
 
-.middle-row {
-  justify-content: center;
+p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.11rem;
+  padding-top: 0.5rem;
 }
 
-.bottom-row {
-  justify-content: center;
-}
 
 </style>
 
