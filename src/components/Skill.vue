@@ -1,21 +1,28 @@
 <template>
-  <q-circular-progress
-    show-value
-    class="text-white q-ma-md"
-    :value="value"
-    size="4rem"
-    :thickness="0.2"
-    color="secondary"
-    center-color="accent"
-    track-color="transparent"
+  <div style="width: 33%; padding-top: 1rem">
+    <div class="row justify-center">
+      <q-circular-progress
+        show-value
+        class="text-white q-ma-md"
+        :value="value"
+        size="4rem"
+        :thickness="0.2"
+        color="secondary"
+        center-color="accent"
+        track-color="transparent"
 
-  >
-    <q-icon
-      :name="icon"
-      color="secondary"
-      size="2rem"
-    />
-  </q-circular-progress>
+      >
+        <q-icon
+          :name="icon"
+          color="secondary"
+          size="2rem"
+        />
+      </q-circular-progress>
+    </div>
+    <div style="text-align: center">
+      {{ text }}
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
@@ -32,6 +39,9 @@ export default class Skill extends Vue {
 
   @Prop()
   icon!: string
+
+  @Prop()
+  text!: string
 
 };
 

@@ -40,7 +40,7 @@ export default class Subtitle extends Vue {
 .smallrect {
   width: 20px;
   height: 70px;
-  background: rgba(242, 192, 55, 0.93);
+  background: #D6B20e;
 }
 
 .bigrect {
@@ -58,7 +58,7 @@ export default class Subtitle extends Vue {
 }
 
 .subtext-left {
-  color: #F2C037;
+  color: #D6B20e;
 }
 
 .subtext-right {

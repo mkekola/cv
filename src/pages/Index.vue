@@ -138,8 +138,8 @@ export default class PageIndex extends Vue {
 }
 
 .title {
-  background: #223444;
-  color: white;
+  background: #033b4d;
+  color: #F6F6F6;
   padding: 5px;
   text-transform: uppercase;
   text-align: center;
@@ -153,11 +153,11 @@ export default class PageIndex extends Vue {
 }
 
 .column {
-  background: #223444;
+  background: #033b4d;
 }
 
 .column:nth-child(2n) {
-  background: white;
+  background: #F6F6F6;
 }
 
 .column:nth-child(2) {
