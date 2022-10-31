@@ -26,6 +26,47 @@
           <div class="col-xs-12 col-sm-6 column">
             <!-- TÄSTÄ ALKAA TYÖKOKEMUS-OSIO -->
             <Subtitle title="Työkokemus" :left="true"/>
+            <div class="work">
+              <div class="row q-pl-xl q-mt-lg">
+                <h5 class="q-mt-none q-mb-xs" style="font-weight: bolder">TKO-ÄLY RY</h5>
+              </div>
+              <div class="work-list" style="padding-left: 4rem">
+                <div style="padding-bottom: 1rem">
+                  <div class="row" style="font-size: 1rem; font-weight: bolder">Tiedottaja</div>
+                  <div class="row">01/2022 - </div>
+                </div>
+                <div>
+                  <div class="row" style="font-size: 1rem; font-weight: bolder">Somevastaava</div>
+                  <div class="row">01/2015 - </div>
+                </div>
+              </div>
+              <div class="row q-pl-xl q-mt-lg">
+                <h5 class="q-mt-none q-mb-xs" style="font-weight: bolder">CSF SECURITY OY</h5>
+              </div>
+              <div class="work-list" style="padding-left: 4rem">
+                <div style="padding-bottom: 1rem">
+                  <div class="row" style="font-size: 1rem; font-weight: bolder">Palveluesimies</div>
+                  <div class="row">06/2019 - 09/2022</div>
+                </div>
+                <div>
+                  <div class="row" style="font-size: 1rem; font-weight: bolder">Arvokuljettaja</div>
+                  <div class="row">12/2017 - 06/2019</div>
+                </div>
+              </div>
+              <div class="row q-pl-xl q-mt-lg">
+                <h5 class="q-mt-none q-mb-xs" style="font-weight: bolder">ATRIA OYJ</h5>
+              </div>
+              <div class="work-list" style="padding-left: 4rem">
+                <div style="padding-bottom: 1rem">
+                  <div class="row" style="font-size: 1rem; font-weight: bolder">Logistiikka</div>
+                  <div class="row">11/2015 - 06/2017</div>
+                </div>
+                <div style="padding-bottom: 1rem">
+                  <div class="row" style="font-size: 1rem; font-weight: bolder">Tuotanto</div>
+                  <div class="row">04/2015 - 08/2015</div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="col-xs-12 col-sm-6 column">
             <!-- TÄSTÄ ALKAA KOULUTUS-OSIO -->
@@ -33,8 +74,8 @@
             <div>
               <div class="study">
                 <div class="row justify-center q-mt-xl">
-                  <img src="../assets/hy_logo.svg.png" style="max-height: 4.5rem">
-                  <div style="margin-left: 2rem">
+                  <img src="../assets/hy_logo.svg.png" style="max-height: 4rem">
+                  <div style="margin-left: 2.2rem">
                     <h5 class="q-mt-none q-mb-none" style="font-weight: bolder">HELSINGIN YLIOPISTO</h5>
                     <div style="font-weight: bold">
                       Tietojenkäsittelytieteen kandiohjelma
@@ -177,10 +218,19 @@ export default class PageIndex extends Vue {
 }
 
 .course-list {
-  list-style: none;
   font-size: 1rem;
   font-family: 'Source Sans Pro', sans-serif;
   margin: 1rem;
+}
+
+.work {
+  color: darkgrey;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.work-list {
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0.5rem;
 }
 
 

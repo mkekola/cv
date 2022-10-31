@@ -15,11 +15,11 @@
         <q-icon
           :name="icon"
           color="secondary"
-          size="2rem"
+          size="1.5rem"
         />
       </q-circular-progress>
     </div>
-    <div class="text">
+    <div class="skill-text">
       {{ text }}
     </div>
   </div>
@@ -50,7 +50,7 @@ export default class Skill extends Vue {
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Source+Sans+Pro:wght@300&display=swap');
 
-.text {
+.skill-text {
   text-align: center;
   color: #052c36;
   font-family: 'Source Sans Pro', sans-serif;

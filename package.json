@@ -1,8 +1,8 @@
 {
-  "name": "cv",
+  "name": "mariakekola",
   "version": "0.0.1",
   "description": "Marian CV",
-  "productName": "cv",
+  "productName": "Maria Kekola",
   "author": "Maria <maria.kekola@helsinki.fi>",
   "private": true,
   "scripts": {

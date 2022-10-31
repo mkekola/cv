@@ -121,8 +121,8 @@ module.exports = configure(function (/* ctx */) {
       workboxPluginMode: 'GenerateSW', // 'GenerateSW' or 'InjectManifest'
       workboxOptions: {}, // only for GenerateSW
       manifest: {
-        name: 'cv',
-        short_name: 'cv',
+        name: 'Maria Kekola',
+        short_name: 'MK',
         description: 'Marian CV',
         display: 'standalone',
         orientation: 'portrait',
