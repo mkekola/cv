@@ -37,7 +37,7 @@
                 </div>
                 <div>
                   <div class="row" style="font-size: 1rem; font-weight: bolder">Somevastaava</div>
-                  <div class="row">01/2015 - </div>
+                  <div class="row">01/2022 - </div>
                 </div>
               </div>
               <div class="row q-pl-xl q-mt-lg">
@@ -86,11 +86,11 @@
                   </div>
                   <div class="course-list" style="padding-right: 4rem">
                     <div class="row">Ohjelmoinnin perusteet: Java & Python</div>
-                    <div class="row">Ohjelmmoinnin jatko: Python</div>
+                    <div class="row">Ohjelmoinnin jatko: Python</div>
                     <div class="row">Tietorakenteet & algoritmit: Python</div>
                     <div class="row">Tietokannat: SQL</div>
                     <div class="row">Japanin kieli CEFR A2</div>
-                    <div class="row">Full Stack: React/Node alkeet</div>
+                    <div class="row">Full Stack Open: React/Node alkeet</div>
                   </div>
                 </div>
                 <div class="row justify-center">
