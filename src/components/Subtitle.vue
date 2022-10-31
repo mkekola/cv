@@ -53,7 +53,7 @@ export default class Subtitle extends Vue {
   line-height: 70px;
   margin-left: 2rem;
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 

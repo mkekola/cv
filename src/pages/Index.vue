@@ -24,55 +24,63 @@
             </p>
           </div>
           <div class="col-xs-12 col-sm-6 column">
+            <!-- TÄSTÄ ALKAA TYÖKOKEMUS-OSIO -->
             <Subtitle title="Työkokemus" :left="true"/>
           </div>
           <div class="col-xs-12 col-sm-6 column">
+            <!-- TÄSTÄ ALKAA KOULUTUS-OSIO -->
             <Subtitle title="Koulutus" :left="false"/>
-            Second column
+            <div>
+              <div class="study">
+                <div class="row justify-center q-mt-xl">
+                  <img src="../assets/hy_logo.svg.png" style="max-height: 4.5rem">
+                  <div style="margin-left: 2rem">
+                    <h5 class="q-mt-none q-mb-none" style="font-weight: bolder">HELSINGIN YLIOPISTO</h5>
+                    <div style="font-weight: bold">
+                      Tietojenkäsittelytieteen kandiohjelma
+                    </div>
+                    <div>
+                      09/2021 - 05/2024 (arvio)
+                    </div>
+                  </div>
+                  <div class="course-list" style="padding-right: 4rem">
+                    <div class="row">Ohjelmoinnin perusteet: Java & Python</div>
+                    <div class="row">Ohjelmmoinnin jatko: Python</div>
+                    <div class="row">Tietorakenteet & algoritmit: Python</div>
+                    <div class="row">Tietokannat: SQL</div>
+                    <div class="row">Japanin kieli CEFR A2</div>
+                    <div class="row">Full Stack: React/Node alkeet</div>
+                  </div>
+                </div>
+                <div class="row justify-center">
+                  <img src="../assets/seamk.png" style="max-height: 1.2rem; margin-top: 1.5rem">
+                  <div style="margin-left: 1.8rem">
+                    <h5 class="q-mt-none q-mb-none" style="font-weight: bolder">SEINÄJOEN AMK</h5>
+                    <div style="font-weight: bold">
+                      Bio- ja elintarviketekniikan insinööri
+                    </div>
+                    <div>
+                      08/2015 - 05/2016
+                    </div>
+                  </div>
+                  <div class="course-list" style="padding-right: 6rem; padding-bottom: 2rem">
+                    <div class="row">Matematiikka 1</div>
+                    <div class="row">Fysiikka 1</div>
+                    <div class="row">Differentiaali- ja integraalilaskenta</div>
+                    <div class="row">Tieto- ja viestintätekniikka</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="col-xs-12 col-sm-6 column">
+            <!-- TÄSTÄ ALKAA YHTEYSTIEDOT-OSIO -->
             <Subtitle title="Yhteystiedot" :left="true"/>
-            <q-btn class="q-mx-xl q-my-lg" flat v-ripple no-caps
-                   style="height: 3.1rem; font-family: 'Source Sans Pro', sans-serif;"
-                   @click="moveToPage('mailto: maria.kekola@gmail.com')">
-              <div class="row justify-start">
-                <div style="position: absolute; left: 40px; top: 50%; transform: translateY(-50%)">
-                  <q-avatar icon="fa-solid fa-envelope" font-size="0.8rem" size="2.5rem" color="secondary"
-                            text-color="accent"/>
-                </div>
-                <div style="font-size: 1.1rem; color: darkgrey; text-align: start; width: 5rem">
-                  Sähköposti
-                </div>
-              </div>
-            </q-btn>
-            <q-btn class="q-mx-xl q-my-lg" flat v-ripple no-caps
-                   style="height: 3.1rem; font-family: 'Source Sans Pro', sans-serif;"
-                   @click="moveToPage('https://github.com/mkekola')">
-              <div class="row justify-start">
-                <div style="position: absolute; left: 40px; top: 50%; transform: translateY(-50%)">
-                  <q-avatar icon="fa-brands fa-github" font-size="0.92rem" size="2.5rem" color="secondary"
-                            text-color="accent"/>
-                </div>
-                <div style="font-size: 1.1rem; color: darkgray; text-align: start; width: 5rem">
-                  Github
-                </div>
-              </div>
-            </q-btn>
-            <q-btn class="q-mx-xl q-my-lg" flat v-ripple no-caps
-                   style="height: 3.1rem; font-family: 'Source Sans Pro', sans-serif;"
-                   @click="moveToPage('https://www.instagram.com/mariasimpression/')">
-              <div class="row justify-start">
-                <div style="position: absolute; left: 40px; top: 50%; transform: translateY(-50%)">
-                  <q-avatar icon="fa-brands fa-instagram" font-size="0.92rem" size="2.5rem" color="secondary"
-                            text-color="accent"/>
-                </div>
-                <div style="font-size: 1.1rem; color: darkgrey; text-align: start; width: 5rem">
-                  Portfolio
-                </div>
-              </div>
-            </q-btn>
+            <Contact/>
+
           </div>
           <div class="col-xs-12 col-sm-6 column">
+            <!-- TÄSTÄ ALKAA TAIDOT-OSIO -->
             <Subtitle title="Taidot" :left="false"/>
             <SkillList/>
 
@@ -90,15 +98,13 @@ import {Vue, Component} from 'vue-property-decorator';
 import Carousel from 'components/Carousel.vue';
 import Subtitle from 'components/Subtitle.vue';
 import SkillList from 'components/SkillList.vue';
+import Contact from 'components/Contact.vue';
 
 
 @Component({
-  components: {SkillList, Carousel, Subtitle, ExampleComponent}
+  components: {Contact, SkillList, Carousel, Subtitle, ExampleComponent}
 })
 export default class PageIndex extends Vue {
-  moveToPage(link: string) {
-    window.open(link)
-  }
 
 };
 
@@ -130,6 +136,7 @@ export default class PageIndex extends Vue {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: lighter;
   padding-bottom: 1rem;
+  color: #052c36;
 }
 
 .name span {
@@ -138,7 +145,7 @@ export default class PageIndex extends Vue {
 }
 
 .title {
-  background: #033b4d;
+  background: #052c36;
   color: #F6F6F6;
   padding: 5px;
   text-transform: uppercase;
@@ -153,7 +160,7 @@ export default class PageIndex extends Vue {
 }
 
 .column {
-  background: #033b4d;
+  background: #052c36;
 }
 
 .column:nth-child(2n) {
@@ -164,10 +171,24 @@ export default class PageIndex extends Vue {
   padding: 70px 20px;
 }
 
+.study {
+  color: #052c36;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.course-list {
+  list-style: none;
+  font-size: 1rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 1rem;
+}
+
+
 p {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.11rem;
   padding-top: 0.5rem;
+  color: #052c36;
 }
 
 
